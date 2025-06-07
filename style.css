@@ -1,0 +1,142 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #222;
+}
+
+a {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Header / Hero */
+.hero {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Section Dividers */
+.about, .books, .contact {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.about::after, .books::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #1a1a1a 20%, #666 50%, #1a1a1a 80%, transparent 100%);
+}
+
+.about::before, .books::before {
+  content: '◆';
+  position: absolute;
+  bottom: -37px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #1a1a1a;
+  font-size: 12px;
+  background: white;
+  padding: 0 10px;
+}
+
+/* About Section */
+.about {
+  padding-top: 50px;
+}
+.author-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.author-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0;
+}
+
+.author-card img {
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  object-fit: scale-down;
+}
+
+/* Books Section */
+.books {
+  padding-top: 50px;
+}
+
+.book-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.book-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.book-card img {
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  object-fit: scale-down;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  background: #f9f9f9;
+  padding: 40px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .books .book-grid {
+    grid-template-columns: 1fr;
+  }
+  
+@media (max-width: 700px) {
+  .about .author-grid{
+    grid-template-columns:auto;
+  }
